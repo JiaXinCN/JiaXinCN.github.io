@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo博客新增/删除文章]]></title>
+    <url>%2F2019%2F04%2F17%2Fhexo%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%A2%9E-%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0%2F</url>
+    <content type="text"><![CDATA[成功搭建好了以hexo为框架的个人博客，并且成功的将其部署在github网站上，地址为：https://jiaxincn.github.io，接下来就要对个人博客进行管理和更新了。 删除文章以建立hexo个人博客的时候创建的文章 Hellow World 为例说明删除文章的过程： 删除本地文件进入到 \sourse\_post 文件夹下，找到hellowworld.md 文件，执行本地删除； 生成静态文件 小提示：在某些情况，如果发现您对站点的更改无论如何也不生效，您可能需要运行 clean 命令hexo clean 启动命令行，进入 blog 文件夹中，在命令行中执行如下命令：1hexo g 将博客部署到 github 上启动命令行，进入 blog 文件夹中，在命令行中执行如下命令：1hexo d 创建文章创建文章的方法与删除文章类似，具体过程如下： 创建本地博客文章启动命令行，进入 blog 文件夹中，在命令行中执行如下命令： 1hexo new "My New Post" 编写博客文章在 \sourse\_post 中，找到新建的文章 My New Post，使用编辑器编写博客文章； 生成静态文件步骤与删除文件中步骤 2 相同； 12hexo cleanhexo g 将博客部署到 github 上步骤与删除文件中步骤 3 相同； 1hexo d]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>-笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F04%2F16%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
