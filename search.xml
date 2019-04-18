@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[贵州旅行计划安排]]></title>
+    <url>%2F2019%2F04%2F18%2F%E8%B4%B5%E5%B7%9E%E6%97%85%E8%A1%8C%E8%AE%A1%E5%88%92%E5%AE%89%E6%8E%92%2F</url>
+    <content type="text"><![CDATA[五月份要和家里人去贵州旅行，规划一下路线和形成，收集一些网上的资料，为旅行做准备 攻略的目的只是为了安排大致的时间，精确到“天”为单位，其他具体内容应该会在之后旅行时更新！ 放一张贵州景点地图参考一下 以下景点或城镇顺序基本为游览顺序，在景点与景点之间的交通方式为汽车或火车 贵阳先上地图（有点不清晰 -_-||| ）： 贵阳景点青岩古镇，黔灵山公园，甲秀楼-翠微园，花溪公园，天河潭 贵阳美食恋爱豆腐果、丝娃娃、肠旺面、五彩糯米饭、凉拌米豆腐、荷包烤蛋、酸汤伴米豆腐、香肠洋芋丝、香煎二块粑、丝恋炒卷皮、织金臭豆腐、炸怪味洋芋、特色伴苕粉……传说中的馆子：柒食贵阳味 贵阳——安顺交通方式：火车列车时刻表，由于时间短，票价参考为硬座或二等座： 出发站 出发时间 车型/历时 票价 到站 贵阳 全天基本有车 普通/1时25分 15.5 安顺 全天基本有车 动车/30分 46.5 安顺安顺主要的游玩景点就是黄果树瀑布了，一些门票信息如下（数据来自于携程）：]]></content>
+      <categories>
+        <category>旅行</category>
+      </categories>
+      <tags>
+        <tag>-旅行 -旅行计划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python计算环境——NumPy库]]></title>
+    <url>%2F2019%2F04%2F18%2FPython%E8%AE%A1%E7%AE%97%E7%8E%AF%E5%A2%83%E2%80%94%E2%80%94NumPy%2F</url>
+    <content type="text"><![CDATA[概述NumPy（Numerical Python）是 Python 语言的一个扩展程序库，支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库，其中包含： 一个强大的N维数组对象 ndarray 广播功能函数 整合 C/C++/Fortran 代码的工具 线性代数、傅里叶变换、随机数生成等功能 NumPy 通常与 SciPy 和 Matplotlib 一起使用，是一个强大的科学计算环境。 SciPy库 SciPy 是一个开源的 Python 算法库和数学工具包。SciPy 包含的模块有最优化、线性代数、积分、插值、特殊函数、快速傅里叶变换、信号处理和图像处理、常微分方程求解和其他科学与工程中常用的计算。 Matplotlib库 Matplotlib 是 Python 编程语言及其数值数学扩展包 NumPy 的可视化操作界面。它为利用通用的图形用户界面工具包，如 Tkinter,、wxPython、Qt 或 GTK+ 向应用程序嵌入式绘图提供了应用程序接口（API）。]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>-Python -NumPy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hexo博客新增/删除文章]]></title>
     <url>%2F2019%2F04%2F17%2Fhexo%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%A2%9E-%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0%2F</url>
     <content type="text"><![CDATA[成功搭建好了以hexo为框架的个人博客，并且成功的将其部署在github网站上，地址为：https://jiaxincn.github.io，接下来就要对个人博客进行管理和更新了。 搭建过程请参考 NexT主题 文档：http://theme-next.iissnan.com/ 删除文章以建立hexo个人博客的时候创建的文章 Hellow World 为例说明删除文章的过程： 删除本地文件进入到 \sourse\_post 文件夹下，找到hellowworld.md 文件，执行本地删除； 生成静态文件启动命令行，进入 blog 文件夹中，在命令行中执行如下命令： 1hexo g 小提示：在某些情况，如果发现您对站点的更改无论如何也不生效，您可能需要运行 clean 命令hexo clean 将博客部署到 github 上启动命令行，进入 blog 文件夹中，在命令行中执行如下命令：1hexo d 创建文章创建文章的方法与删除文章类似，具体过程如下： 创建本地博客文章启动命令行，进入 blog 文件夹中，在命令行中执行如下命令： 1hexo new "My New Post" 编写博客文章在 \sourse\_post 中，找到新建的文章 My New Post，使用编辑器编写博客文章； 生成静态文件步骤与删除文件中步骤 2 相同； 12hexo cleanhexo g 将博客部署到 github 上步骤与删除文件中步骤 3 相同； 1hexo d]]></content>
