@@ -96,19 +96,19 @@
 
 
 
-  <meta name="description" content="参考：NumPy 教程：http://www.runoob.com/numpy/numpy-tutorial.htmlNumPy 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlPandas 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlMatplotlivb 教程：http:/">
+  <meta name="description" content="参考：NumPy 教程：http://www.runoob.com/numpy/numpy-tutorial.htmlNumPy 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlPandas 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlMatplotlivb 教程：http://w">
 <meta name="keywords" content="-Python -NumPy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python计算环境——NumPy库">
 <meta property="og:url" content="http://yoursite.com/2019/04/18/Python计算环境——NumPy/index.html">
 <meta property="og:site_name" content="Jiaxin&#39;s blog">
-<meta property="og:description" content="参考：NumPy 教程：http://www.runoob.com/numpy/numpy-tutorial.htmlNumPy 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlPandas 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlMatplotlivb 教程：http:/">
+<meta property="og:description" content="参考：NumPy 教程：http://www.runoob.com/numpy/numpy-tutorial.htmlNumPy 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlPandas 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlMatplotlivb 教程：http://w">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3654705884,1441360518&fm=173&app=25&f=JPEG?w=640&h=520&s=B8A8783219BED4CE5E5DB0CF0000A0B1">
-<meta property="og:updated_time" content="2019-04-21T12:48:25.379Z">
+<meta property="og:updated_time" content="2019-04-21T12:50:36.325Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python计算环境——NumPy库">
-<meta name="twitter:description" content="参考：NumPy 教程：http://www.runoob.com/numpy/numpy-tutorial.htmlNumPy 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlPandas 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlMatplotlivb 教程：http:/">
+<meta name="twitter:description" content="参考：NumPy 教程：http://www.runoob.com/numpy/numpy-tutorial.htmlNumPy 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlPandas 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlMatplotlivb 教程：http://w">
 <meta name="twitter:image" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3654705884,1441360518&fm=173&app=25&f=JPEG?w=640&h=520&s=B8A8783219BED4CE5E5DB0CF0000A0B1">
 
 
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-21 20:48:25" itemprop="dateModified" datetime="2019-04-21T20:48:25+08:00">2019-04-21</time>
+                <time title="修改时间：2019-04-21 20:50:36" itemprop="dateModified" datetime="2019-04-21T20:50:36+08:00">2019-04-21</time>
               
             
           </span>
@@ -493,8 +493,6 @@
 
       
         <blockquote>
-<blockquote>
-<blockquote>
 <p>参考：<br>NumPy 教程：<a href="http://www.runoob.com/numpy/numpy-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/numpy/numpy-tutorial.html</a><br>NumPy 中文文档：<a href="http://www.runoob.com/numpy/numpy-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/numpy/numpy-tutorial.html</a><br>Pandas 中文文档：<a href="http://www.runoob.com/numpy/numpy-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/numpy/numpy-tutorial.html</a><br>Matplotlivb 教程：<a href="http://www.runoob.com/numpy/numpy-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/numpy/numpy-tutorial.html</a></p>
 </blockquote>
 <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p><strong>NumPy</strong>（Numerical Python）是 Python 语言的一个扩展程序库，支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库，其中包含：</p>
@@ -583,13 +581,9 @@
 <p><code>numpy.asarray(a, dtype = None, order = None)</code></p>
 <p>参数说明：</p>
 <p>a：任意形式的输入参数，可以是，列表, 列表的元组, 元组, 元组的元组, 元组的列表，多维数组。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt; &gt;   <span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line">&gt; &gt;   <span class="comment"># 示例 </span></span><br><span class="line">&gt; &gt;   x =  [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] </span><br><span class="line">&gt; &gt;   a = np.asarray(x)  </span><br><span class="line">&gt; &gt;   </span><br><span class="line">&gt; &gt;   x =  (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>) </span><br><span class="line">&gt; &gt;   a = np.asarray(x)  </span><br><span class="line">&gt; &gt;         </span><br><span class="line">&gt; &gt;   x =  [(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),(<span class="number">4</span>,<span class="number">5</span>)] </span><br><span class="line">&gt; &gt;   a = np.asarray(x)</span><br><span class="line">&gt; &gt;   </span><br><span class="line">&gt; &gt;   x =  [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] </span><br><span class="line">&gt; &gt;   a = np.asarray(x, dtype =  float) </span><br><span class="line">&gt; &gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"><span class="comment"># 示例 </span></span><br><span class="line">x =  [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] </span><br><span class="line">a = np.asarray(x)  </span><br><span class="line"></span><br><span class="line">x =  (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>) </span><br><span class="line">a = np.asarray(x)  </span><br><span class="line">      </span><br><span class="line">x =  [(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),(<span class="number">4</span>,<span class="number">5</span>)] </span><br><span class="line">a = np.asarray(x)</span><br><span class="line"></span><br><span class="line">x =  [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] </span><br><span class="line">a = np.asarray(x, dtype =  float)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
 <ul>
 <li><p><strong>frombuffer函数</strong>：用于实现动态数组，接受 buffer 输入参数，以流的形式读入转化成 ndarray 对象。</p>
 <p><code>numpy.frombuffer(buffer, dtype = float, count = -1, offset = 0)</code></p>
@@ -600,35 +594,23 @@
 </blockquote>
 <p>count：读取的数据数量，默认为-1，读取所有数据。</p>
 <p>offset：读取的起始位置，默认为0。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; &gt;   <span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">&gt; &gt;   </span><br><span class="line">&gt; &gt;   s =  <span class="string">b'Hello World'</span> </span><br><span class="line">&gt; &gt;   a = np.frombuffer(s, dtype =  <span class="string">'S1'</span>)</span><br><span class="line">&gt; &gt;   print(a)</span><br><span class="line">&gt; &gt;   <span class="comment"># 结果如下：</span></span><br><span class="line">&gt; &gt;   <span class="comment"># [b'H' b'e' b'l' b'l' b'o' b' ' b'W' b'o' b'r' b'l' b'd']</span></span><br><span class="line">&gt; &gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">s =  <span class="string">b'Hello World'</span> </span><br><span class="line">a = np.frombuffer(s, dtype =  <span class="string">'S1'</span>)</span><br><span class="line">print(a)</span><br><span class="line"><span class="comment"># 结果如下：</span></span><br><span class="line"><span class="comment"># [b'H' b'e' b'l' b'l' b'o' b' ' b'W' b'o' b'r' b'l' b'd']</span></span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<ul>
 <li><p><strong>fromiter函数</strong>：方法从可迭代对象中建立 ndarray 对象，返回一维数组。</p>
 <p><code>numpy.fromiter(iterable, dtype, count=-1)</code></p>
 <p>参数说明：</p>
 <p>iterable：可迭代对象</p>
 <p>dtype：返回数组的数据类型</p>
 <p>count：读取的数据数量，默认为-1，读取所有数据</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; &gt;   <span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line">&gt; &gt;    </span><br><span class="line">&gt; &gt;   <span class="comment"># 使用 range 函数创建列表对象  </span></span><br><span class="line">&gt; &gt;   list=range(<span class="number">5</span>)</span><br><span class="line">&gt; &gt;   it=iter(list)</span><br><span class="line">&gt; &gt;    </span><br><span class="line">&gt; &gt;   <span class="comment"># 使用迭代器创建 ndarray </span></span><br><span class="line">&gt; &gt;   x=np.fromiter(it, dtype=float)</span><br><span class="line">&gt; &gt;   print(x)</span><br><span class="line">&gt; &gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用 range 函数创建列表对象  </span></span><br><span class="line">list=range(<span class="number">5</span>)</span><br><span class="line">it=iter(list)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用迭代器创建 ndarray </span></span><br><span class="line">x=np.fromiter(it, dtype=float)</span><br><span class="line">print(x)</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p><strong>arange 函数</strong>：类似于内置的 range，但返回的是一个ndarray而不是列表对象，根据 start 与 stop 指定的范围以及 step 设定的步长，生成一个 ndarray。</p>
 <p><code>numpy.arange(start, stop, step, dtype)</code></p>
 <p>参数说明：</p>
-<p>| 参数    |                             描述                             |<br>| ——- | :———————————————————-: |<br>| <code>start</code> |                      起始值，默认为<code>0</code>                       |<br>| <code>stop</code>  |                       终止值（不包含）                       |<br>| <code>step</code>  |                       步长，默认为<code>1</code>                        |<br>| <code>dtype</code> | 返回<code>ndarray</code>的数据类型，如果没有提供，则会使用输入数据的类型。 |</p>
+<p>| 参数    |                             描述                              |<br>| ——- | :———————————————————-: |<br>| <code>start</code> |                      起始值，默认为<code>0</code>                          |<br>| <code>stop</code>  |                       终止值（不包含）                       |<br>| <code>step</code>  |                       步长，默认为<code>1</code>                        |<br>| <code>dtype</code> | 返回<code>ndarray</code>的数据类型，如果没有提供，则会使用输入数据的类型。 |</p>
 </li>
 </ul>
-<ul>
+</li>
 <li><p><strong>linspace 函数</strong>：用于创建一个一维数组，数组是一个等差数列构成的。</p>
 <p><code>np.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None)</code><br>| 参数       | 描述                                                         |<br>| ———- | ———————————————————— |<br>| <code>start</code>    | 序列的起始值                                                 |<br>| <code>stop</code>     | 序列的终止值，如果<code>endpoint</code>为<code>true</code>，该值包含于数列中       |<br>| <code>num</code>      | 要生成的等步长的样本数量，默认为<code>50</code>                         |<br>| <code>endpoint</code> | 该值为 <code>ture</code> 时，数列中中包含<code>stop</code>值，反之不包含，默认是True。 |<br>| <code>retstep</code>  | 如果为 True 时，生成的数组中会显示间距，反之不显示。         |<br>| <code>dtype</code>    | <code>ndarray</code> 的数据类型                                         |</p>
 </li>
@@ -639,11 +621,7 @@
 </li>
 </ul>
 <h2 id="数据类型（dtype）"><a href="#数据类型（dtype）" class="headerlink" title="数据类型（dtype）"></a>数据类型（dtype）</h2><p><img src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3654705884,1441360518&amp;fm=173&amp;app=25&amp;f=JPEG?w=640&amp;h=520&amp;s=B8A8783219BED4CE5E5DB0CF0000A0B1" alt="Ndarray 数据类型"><br><strong>通过astype方法显式地转换dtype</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; &gt; <span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">&gt; &gt; arr = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]]) <span class="comment"># 创建数组</span></span><br><span class="line">&gt; &gt; arr.dtype <span class="comment"># 返回数组类型，此时应为'int64'</span></span><br><span class="line">&gt; &gt;  </span><br><span class="line">&gt; &gt; <span class="comment"># 转换数据类型 </span></span><br><span class="line">&gt; &gt; float_arr = arr.dtype(np.float64)</span><br><span class="line">&gt; &gt; </span><br><span class="line">&gt; &gt; arr.dtype <span class="comment"># 返回数组类型，此时应为'float64'</span></span><br><span class="line">&gt; &gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">arr = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]]) <span class="comment"># 创建数组</span></span><br><span class="line">arr.dtype <span class="comment"># 返回数组类型，此时应为'int64'</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 转换数据类型 </span></span><br><span class="line">float_arr = arr.dtype(np.float64)</span><br><span class="line"></span><br><span class="line">arr.dtype <span class="comment"># 返回数组类型，此时应为'float64'</span></span><br></pre></td></tr></table></figure>
 <h2 id="数组属性"><a href="#数组属性" class="headerlink" title="数组属性"></a>数组属性</h2><table>
 <thead>
 <tr>
@@ -690,9 +668,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="切片和索引"><a href="#切片和索引" class="headerlink" title="切片和索引"></a>切片和索引</h2></blockquote>
-</blockquote>
-
+<h2 id="切片和索引"><a href="#切片和索引" class="headerlink" title="切片和索引"></a>切片和索引</h2>
       
     </div>
 
