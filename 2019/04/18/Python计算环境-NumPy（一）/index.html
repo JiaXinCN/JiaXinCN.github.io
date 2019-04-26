@@ -99,15 +99,15 @@
   <meta name="description" content="参考：NumPy 教程：http://www.runoob.com/numpy/numpy-tutorial.htmlNumPy 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlPandas 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlMatplotlivb 教程：http://w">
 <meta name="keywords" content="-Python -NumPy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python计算环境——NumPy库">
-<meta property="og:url" content="http://yoursite.com/2019/04/18/Python计算环境——NumPy/index.html">
+<meta property="og:title" content="Python计算环境——NumPy库(一)">
+<meta property="og:url" content="http://yoursite.com/2019/04/18/Python计算环境-NumPy（一）/index.html">
 <meta property="og:site_name" content="Jiaxin&#39;s blog">
 <meta property="og:description" content="参考：NumPy 教程：http://www.runoob.com/numpy/numpy-tutorial.htmlNumPy 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlPandas 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlMatplotlivb 教程：http://w">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3654705884,1441360518&fm=173&app=25&f=JPEG?w=640&h=520&s=B8A8783219BED4CE5E5DB0CF0000A0B1">
-<meta property="og:updated_time" content="2019-04-21T12:50:36.325Z">
+<meta property="og:updated_time" content="2019-04-26T02:12:37.318Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python计算环境——NumPy库">
+<meta name="twitter:title" content="Python计算环境——NumPy库(一)">
 <meta name="twitter:description" content="参考：NumPy 教程：http://www.runoob.com/numpy/numpy-tutorial.htmlNumPy 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlPandas 中文文档：http://www.runoob.com/numpy/numpy-tutorial.htmlMatplotlivb 教程：http://w">
 <meta name="twitter:image" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3654705884,1441360518&fm=173&app=25&f=JPEG?w=640&h=520&s=B8A8783219BED4CE5E5DB0CF0000A0B1">
 
@@ -117,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/04/18/Python计算环境——NumPy/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/18/Python计算环境-NumPy（一）/">
 
 
 
@@ -127,7 +127,7 @@
   };
 </script>
 
-  <title>Python计算环境——NumPy库 | Jiaxin's blog</title>
+  <title>Python计算环境——NumPy库(一) | Jiaxin's blog</title>
   
 
 
@@ -373,7 +373,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/18/Python计算环境——NumPy/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/18/Python计算环境-NumPy（一）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jiaxin">
@@ -390,7 +390,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python计算环境——NumPy库
+          <h1 class="post-title" itemprop="name headline">Python计算环境——NumPy库(一)
 
               
             
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-21 20:50:36" itemprop="dateModified" datetime="2019-04-21T20:50:36+08:00">2019-04-21</time>
+                <time title="修改时间：2019-04-26 10:12:37" itemprop="dateModified" datetime="2019-04-26T10:12:37+08:00">2019-04-26</time>
               
             
           </span>
@@ -668,7 +668,61 @@
 </tr>
 </tbody>
 </table>
-<h2 id="切片和索引"><a href="#切片和索引" class="headerlink" title="切片和索引"></a>切片和索引</h2>
+<h2 id="切片和索引"><a href="#切片和索引" class="headerlink" title="切片和索引"></a>切片和索引</h2><p>与 python 中列表操作相同：<code>start:stop:step</code></p>
+<h3 id="高级索引"><a href="#高级索引" class="headerlink" title="高级索引"></a>高级索引</h3><h4 id="整数数组索引"><a href="#整数数组索引" class="headerlink" title="整数数组索引"></a>整数数组索引</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"> </span><br><span class="line">x = np.array([[  <span class="number">0</span>,  <span class="number">1</span>,  <span class="number">2</span>],[  <span class="number">3</span>,  <span class="number">4</span>,  <span class="number">5</span>],[  <span class="number">6</span>,  <span class="number">7</span>,  <span class="number">8</span>],[  <span class="number">9</span>,  <span class="number">10</span>,  <span class="number">11</span>]])  </span><br><span class="line"><span class="keyword">print</span> (<span class="string">'我们的数组是：'</span> )</span><br><span class="line"><span class="keyword">print</span> (x)</span><br><span class="line"><span class="keyword">print</span> (<span class="string">'\n'</span>)</span><br><span class="line">rows = np.array([[<span class="number">0</span>,<span class="number">0</span>],[<span class="number">3</span>,<span class="number">3</span>]]) </span><br><span class="line">cols = np.array([[<span class="number">0</span>,<span class="number">2</span>],[<span class="number">0</span>,<span class="number">2</span>]]) </span><br><span class="line">y = x[rows,cols]  </span><br><span class="line"><span class="keyword">print</span>  (<span class="string">'这个数组的四个角元素是：'</span>)</span><br><span class="line"><span class="keyword">print</span> (y)</span><br><span class="line"></span><br><span class="line">a = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]])</span><br><span class="line">b = a[<span class="number">1</span>:<span class="number">3</span>, <span class="number">1</span>:<span class="number">3</span>]</span><br><span class="line">c = a[<span class="number">1</span>:<span class="number">3</span>,[<span class="number">1</span>,<span class="number">2</span>]]</span><br><span class="line">print(b)</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
+<h4 id="布尔索引"><a href="#布尔索引" class="headerlink" title="布尔索引"></a>布尔索引</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"> </span><br><span class="line">x = np.array([[  <span class="number">0</span>,  <span class="number">1</span>,  <span class="number">2</span>],[  <span class="number">3</span>,  <span class="number">4</span>,  <span class="number">5</span>],[  <span class="number">6</span>,  <span class="number">7</span>,  <span class="number">8</span>],[  <span class="number">9</span>,  <span class="number">10</span>,  <span class="number">11</span>]])  </span><br><span class="line"><span class="keyword">print</span> (<span class="string">'我们的数组是：'</span>)</span><br><span class="line"><span class="keyword">print</span> (x)</span><br><span class="line"><span class="keyword">print</span> (<span class="string">'\n'</span>)</span><br><span class="line"><span class="comment"># 现在我们会打印出大于 5 的元素  </span></span><br><span class="line"><span class="keyword">print</span>  (<span class="string">'大于 5 的元素是：'</span>)</span><br><span class="line"><span class="keyword">print</span> (x[x &gt;  <span class="number">5</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用了 ~（取补运算符）来过滤 NaN</span></span><br><span class="line">a = np.array([np.nan,  <span class="number">1</span>,<span class="number">2</span>,np.nan,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]) </span><br><span class="line">print(a) </span><br><span class="line"><span class="keyword">print</span> (a[~np.isnan(a)])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 滤掉非复数元素</span></span><br><span class="line">a = np.array([<span class="number">1</span>,  <span class="number">2</span>+<span class="number">6j</span>,  <span class="number">5</span>,  <span class="number">3.5</span>+<span class="number">5j</span>])  </span><br><span class="line"><span class="keyword">print</span> (a[np.iscomplex(a)])</span><br></pre></td></tr></table></figure>
+<h3 id="花式索引"><a href="#花式索引" class="headerlink" title="花式索引"></a>花式索引</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"></span><br><span class="line"><span class="comment"># 取行元素</span></span><br><span class="line">x=np.arange(<span class="number">32</span>).reshape((<span class="number">8</span>,<span class="number">4</span>))</span><br><span class="line">print(x)</span><br><span class="line">print(<span class="string">'\n'</span>)</span><br><span class="line"><span class="keyword">print</span> (x[[<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">7</span>]]) <span class="comment"># 取4、2、1、7行（从0行开始）</span></span><br><span class="line">print(<span class="string">'\n'</span>)</span><br><span class="line"><span class="keyword">print</span> (x[[<span class="number">-4</span>,<span class="number">-2</span>,<span class="number">-1</span>,<span class="number">-7</span>]]) <span class="comment"># 同理</span></span><br><span class="line">print(<span class="string">'\n'</span>)</span><br><span class="line"><span class="keyword">print</span> (x[np.ix_([<span class="number">1</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">2</span>],[<span class="number">0</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>])]) <span class="comment"># 先取行，接着调整行的顺序</span></span><br></pre></td></tr></table></figure>
+<h2 id="广播（Broadcast）"><a href="#广播（Broadcast）" class="headerlink" title="广播（Broadcast）"></a>广播（Broadcast）</h2><p>广播(Broadcast)是 numpy 对不同形状(shape)的数组进行数值计算的方式，对数组的算术运算通常在相应的元素上进行。</p>
+<p>如果两个数组 a 和 b 形状相同，即满足 <strong>a.shape == b.shape</strong>，那么 a*b 的结果就是 a 与 b 数组对应位相乘。这要求维数相同，且各维度的长度相同。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"> </span><br><span class="line">a = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]) </span><br><span class="line">b = np.array([<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>]) </span><br><span class="line">c = a * b </span><br><span class="line"><span class="keyword">print</span> (c)</span><br></pre></td></tr></table></figure>
+<p>当运算中的 2 个数组的形状不同时，numpy 将自动触发广播机制。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([[ <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">           [<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>],</span><br><span class="line">           [<span class="number">20</span>,<span class="number">20</span>,<span class="number">20</span>],</span><br><span class="line">           [<span class="number">30</span>,<span class="number">30</span>,<span class="number">30</span>]])</span><br><span class="line">b = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 广播机制：</span></span><br><span class="line"><span class="comment"># tile 函数将扩充为4行1列</span></span><br><span class="line"><span class="comment"># 与a数组形状相同</span></span><br><span class="line"><span class="comment"># bb = np.tile(b, (4, 1))</span></span><br><span class="line"><span class="comment"># print(a+bb)</span></span><br><span class="line"></span><br><span class="line">print(a + b)</span><br></pre></td></tr></table></figure>
+<h3 id="广播的规则"><a href="#广播的规则" class="headerlink" title="广播的规则:"></a>广播的规则:</h3><ul>
+<li>让所有输入数组都向其中形状最长的数组看齐，形状中不足的部分都通过在前面加 1 补齐。</li>
+<li>输出数组的形状是输入数组形状的各个维度上的最大值。</li>
+<li>如果输入数组的某个维度和输出数组的对应维度的长度相同或者其长度为 1 时，这个数组能够用来计算，否则出错。</li>
+<li>当输入数组的某个维度的长度为 1 时，沿着此维度运算时都用此维度上的第一组值。</li>
+</ul>
+<p><strong>简单理解：</strong>对两个数组，分别比较他们的每一个维度（若其中一个数组没有当前维度则忽略），满足： </p>
+<ul>
+<li>数组拥有相同形状。</li>
+<li>当前维度的值相等。</li>
+<li>当前维度的值有一个是 1。</li>
+</ul>
+<p>若条件不满足，抛出 <strong>“ValueError: frames are not aligned”</strong> 异常。</p>
+<h2 id="Numpy-读写"><a href="#Numpy-读写" class="headerlink" title="Numpy 读写"></a>Numpy 读写</h2><p>Numpy 可以读写磁盘上的文本数据或二进制数据。 </p>
+<p>NumPy 为 ndarray 对象引入了一个简单的文件格式：<strong>npy</strong>。</p>
+<p>npy 文件用于存储重建 ndarray 所需的数据、图形、dtype 和其他信息。 </p>
+<p>常用的 IO 函数有：</p>
+<ul>
+<li>load() 和 save() 函数是读写文件数组数据的两个主要函数，默认情况下，数组是以未压缩的原始二进制格式保存在扩展名为 .npy 的文件中。 </li>
+<li>savze() 函数用于将多个数组写入文件，默认情况下，数组是以未压缩的原始二进制格式保存在扩展名为 .npz 的文件中。 </li>
+<li>loadtxt() 和 savetxt() 函数处理正常的文本文件(.txt 等)</li>
+</ul>
+<h3 id="numpy-save"><a href="#numpy-save" class="headerlink" title="numpy.save()"></a>numpy.save()</h3><p>numpy.save() 函数将数组保存到以 .npy 为扩展名的文件中。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.save(file, arr, allow_pickle=<span class="literal">True</span>, fix_imports=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>参数说明：</strong></p>
+<ul>
+<li><strong>file</strong>：要保存的文件，扩展名为 .npy，如果文件路径末尾没有扩展名 .npy，该扩展名会被自动加上。</li>
+<li><strong>arr</strong>: 要保存的数组</li>
+<li><strong>allow_pickle</strong>: 可选，布尔值，允许使用 Python pickles 保存对象数组，Python 中的 pickle 用于在保存到磁盘文件或从磁盘文件读取之前，对对象进行序列化和反序列化。</li>
+<li><strong>fix_imports</strong>: 可选，为了方便 Pyhton2 中读取 Python3 保存的数据</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"> </span><br><span class="line">a = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]) </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 保存到 outfile.npy 文件上</span></span><br><span class="line">np.save(<span class="string">'outfile.npy'</span>,a) </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 保存到 outfile2.npy 文件上，如果文件路径末尾没有扩展名 .npy，该扩展名会被自动加上</span></span><br><span class="line">np.save(<span class="string">'outfile2'</span>,a)</span><br></pre></td></tr></table></figure>
+<h3 id="numpy-load"><a href="#numpy-load" class="headerlink" title="numpy.load()"></a>numpy.load()</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"> </span><br><span class="line">b = np.load(<span class="string">'outfile.npy'</span>)  </span><br><span class="line"><span class="keyword">print</span> (b)</span><br></pre></td></tr></table></figure>
+<h3 id="numpy-savez"><a href="#numpy-savez" class="headerlink" title="numpy.savez()"></a>numpy.savez()</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.savez(file, *args, **kwds)</span><br></pre></td></tr></table></figure>
+<p><strong>参数说明：</strong></p>
+<ul>
+<li><strong>file</strong>：要保存的文件，扩展名为 <strong>.npz</strong>，如果文件路径末尾没有扩展名 <strong>.npz</strong>，该扩展名会被自动加上。</li>
+<li><strong>args</strong>：要保存的数组，可以使用关键字参数为数组起一个名字，非关键字参数传递的数组会自动起名为 <strong>arr_0</strong>, <strong>arr_1</strong>, …　。</li>
+<li><strong>kwds</strong>：要保存的数组使用关键字名称</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"> </span><br><span class="line">a = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]])</span><br><span class="line">b = np.arange(<span class="number">0</span>, <span class="number">1.0</span>, <span class="number">0.1</span>)</span><br><span class="line">c = np.sin(b)</span><br><span class="line"><span class="comment"># c 使用了关键字参数 sin_array</span></span><br><span class="line">np.savez(<span class="string">"runoob.npz"</span>, a, b, sin_array = c)</span><br><span class="line">r = np.load(<span class="string">"runoob.npz"</span>)  </span><br><span class="line">print(r.files) <span class="comment"># 查看各个数组名称</span></span><br><span class="line">print(r[<span class="string">"arr_0"</span>]) <span class="comment"># 数组 a</span></span><br><span class="line">print(r[<span class="string">"arr_1"</span>]) <span class="comment"># 数组 b</span></span><br><span class="line">print(r[<span class="string">"sin_array"</span>]) <span class="comment"># 数组 c</span></span><br></pre></td></tr></table></figure>
+<h3 id="savetxt-amp-loadtxt"><a href="#savetxt-amp-loadtxt" class="headerlink" title="savetxt() &amp; loadtxt()"></a>savetxt() &amp; loadtxt()</h3><p>savetxt() 函数是以简单的文本文件格式存储数据，对应的使用 loadtxt() 函数来获取数据。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.loadtxt(FILENAME, dtype=int, delimiter=<span class="string">' '</span>)</span><br><span class="line">np.savetxt(FILENAME, a, fmt=<span class="string">"%d"</span>, delimiter=<span class="string">","</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"> </span><br><span class="line">a = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]) </span><br><span class="line">np.savetxt(<span class="string">'out.txt'</span>,a) </span><br><span class="line">b = np.loadtxt(<span class="string">'out.txt'</span>)  </span><br><span class="line"> </span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -747,6 +801,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/04/26/Python计算环境-NumPy（二）/" rel="prev" title="'Python计算环境--NumPy（二）'">
+                'Python计算环境--NumPy（二）' <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -821,7 +879,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -947,7 +1005,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ndarray-对象"><span class="nav-number">2.</span> <span class="nav-text">Ndarray 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建数组"><span class="nav-number">2.1.</span> <span class="nav-text">创建数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型（dtype）"><span class="nav-number">2.2.</span> <span class="nav-text">数据类型（dtype）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组属性"><span class="nav-number">2.3.</span> <span class="nav-text">数组属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切片和索引"><span class="nav-number">2.4.</span> <span class="nav-text">切片和索引</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ndarray-对象"><span class="nav-number">2.</span> <span class="nav-text">Ndarray 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建数组"><span class="nav-number">2.1.</span> <span class="nav-text">创建数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型（dtype）"><span class="nav-number">2.2.</span> <span class="nav-text">数据类型（dtype）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组属性"><span class="nav-number">2.3.</span> <span class="nav-text">数组属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切片和索引"><span class="nav-number">2.4.</span> <span class="nav-text">切片和索引</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#高级索引"><span class="nav-number">2.4.1.</span> <span class="nav-text">高级索引</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#整数数组索引"><span class="nav-number">2.4.1.1.</span> <span class="nav-text">整数数组索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#布尔索引"><span class="nav-number">2.4.1.2.</span> <span class="nav-text">布尔索引</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#花式索引"><span class="nav-number">2.4.2.</span> <span class="nav-text">花式索引</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#广播（Broadcast）"><span class="nav-number">2.5.</span> <span class="nav-text">广播（Broadcast）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#广播的规则"><span class="nav-number">2.5.1.</span> <span class="nav-text">广播的规则:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Numpy-读写"><span class="nav-number">2.6.</span> <span class="nav-text">Numpy 读写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#numpy-save"><span class="nav-number">2.6.1.</span> <span class="nav-text">numpy.save()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#numpy-load"><span class="nav-number">2.6.2.</span> <span class="nav-text">numpy.load()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#numpy-savez"><span class="nav-number">2.6.3.</span> <span class="nav-text">numpy.savez()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#savetxt-amp-loadtxt"><span class="nav-number">2.6.4.</span> <span class="nav-text">savetxt() &amp; loadtxt()</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1132,7 +1190,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2019/04/18/Python计算环境——NumPy/'
+    refer: '2019/04/18/Python计算环境-NumPy（一）/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
