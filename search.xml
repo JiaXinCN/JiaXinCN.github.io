@@ -8,7 +8,8 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>-Python -NumPy</tag>
+        <tag>Python</tag>
+        <tag>NumPy</tag>
       </tags>
   </entry>
   <entry>
@@ -19,7 +20,8 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>-Python -NumPy</tag>
+        <tag>Python</tag>
+        <tag>NumPy</tag>
       </tags>
   </entry>
   <entry>
@@ -30,7 +32,7 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>-笔记</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
 </search>
