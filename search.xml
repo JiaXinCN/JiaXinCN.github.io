@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git&github 使用]]></title>
+    <url>%2F2019%2F05%2F27%2Fgit-github-%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[Git —— 版本控制工具 svn：集中式代码管理工具 git：分布式代码管理管理工具 git常用命令 一、git安装Git下载地址：https://git-scm.com/download TortoiseGit（Git客户端），软件及语言包下载地址：https://tortoisegit.org/download/ 之后，采用默认安装即可 二、创建本地仓库1. 使用 GitBash在需要创建的 git 仓库的文件夹，右键 –&gt; Git Bash Here ，启动 Git Bash，或启动Git Bash，切换目录到仓库所在的目录，输入如下命令 1$ git init 2. 使用 TortoiseGit在需要创建的 git 仓库的文件夹，右键 –&gt; Git 在这里创建版本库 ，不要勾选“制作纯本版库” 3. 使用 GitGUI右键 –&gt; Git GUI Here ，选择 Create New Repository，输入仓库目录。 三、编辑项目，提交到本地仓库首先，编辑工程项目； 之后，将工程提交到本地仓库 添加到本地仓库使用 TortoiseGit：右键 –&gt; Git提交 ，写日志信息并点击提交 四、使用 GitHub 创建一个远程仓库在 GitHub 网页上创建远程项目仓库，不要选择添加 README 也可以使用 码云（https://gitee.com/）国内的开源网站 五、ssh 协议方式使用ssh协议通信时，推荐使用基于密钥的验证方式。你必须为自己创建一对密匙，并把公用密匙放在需要访问的服务器上。如果你要连接到SSH服务器上，客户端软件就会向服务器发出请求，请求用你的密匙进行安全验证。服务器收到请求之后，先在该服务器上你的主目录下寻找你的公用密匙，然后把它和你发送过来的公用密匙进行比较。如果两个密匙一致，服务器就用公用密匙加密“质询”（challenge）并把它发送给客户端软件。客户端软件收到“质询”之后就可以用你的私人密匙解密再把它发送给服务器。 ssh密钥生成打开 Git Bash，执行命令： 1$ ssh-keygen -t rsa 执行命令完成后，在目录 C:\Users\用户名\.ssh 下面生成如下名称的公钥和私钥 id_rsa 为私钥 id_rsa.pub 为公钥 ssh 配置在 github 网站setting中，配置 ssh密钥，头像 –&gt; Setting –&gt; SSH and GPG keys，点击New SSH key，在 key 部分将 id_rsa.pub 文件内容添加进去，然后点击 Add SSH key 按钮完成配置。 推送1.使用 git bash执行语句示例，需要更换第一行后的内容，在 GitHub 仓库建好后有提示： 第一行命令将 本地仓库 与 github仓库 关联 第二行命令将本地仓库推送至GitHub仓库 12git remote add origin git@github.com:JiaXinCN/repo1.gitgit push -u origin master 如果出现如下错误执行命令：git remote rm origin```12345678910111213141516171819&gt; 然后再推送#### 2.使用 TortoiseGit **右键 --&gt; Git 同步…**，点击**管理**，进入如下界面，设置参考下图，密钥为私钥点击**确定**，点击**推送**，成功将本地仓库推送至github仓库![使用 TortoiseGit 同步](http://a3.qpic.cn/psb?/V14faFn00phLM0/a3ROB*APbGUDQojPY9uNYX2fhkoBabLOSI3qUMdTKt4!/b/dDIBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=GwM4AwAAAAADFxE!&amp;tl=1&amp;vuin=1581897229&amp;tm=1558954800&amp;sce=60-2-2&amp;rf=viewer_4)## 六、HTTPS 协议方式### 推送#### 1.使用 git bash在 git bash 中输入命令 git remote add origin https://github.com/JiaXinCN/repo1.gitgit push -u origin master12345678910111213141516此时需要输入 **github的用户名** 和 **密码**#### 2.使用 TortoiseGit与ssh同理，此时不用密匙，同时也要输入 **github的用户名** 和 **密码**## 七、克隆远程仓库到本地&gt; 使用 ssh方式 和 https方式 都可以克隆远端仓库到本地### 1.使用 git bash使用命令时后面网址需要改变 $ git clone git@github.com:JiaXinCN/repo1.git` 2.使用 TortoiseGit右键 -&gt; Git 克隆…，将自动将剪切板中的网址添加至url，点击确定，克隆成功 八、 推送（push）本地修改、拉取（pull）远端修改 一定要在最新的版本下推送至 GitHub 仓库，否则会产生冲突 分支主分支：master分支 HEAD指针严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。 创建分支 例如，Git新建了一个指针叫dev，指向master相同的提交，再把HEAD指向dev，就表示当前分支在dev上，因为除了增加一个dev指针，改改HEAD的指向，工作区的文件都没有任何变化 合并分支 把master指向dev的当前提交，就完成了合并 合并完分支后，甚至可以删除dev分支。删除dev分支就是把dev指针给删掉，删掉后，我们就剩下了一条master分支 一、创建分支创建分支：右键 -&gt; Tortoise -&gt; 创建分支，输入分支名称，点击确定 切换分支：右键 -&gt; Tortoise -&gt; 切换/检出 二、合并分支 先切换至 master 分支，再进行合并； 如在合并之后存在冲突，git会将冲突显示，等待用户修改； 修改完成后，点击解决冲突 提交至 master 分支 三、删除分支在切换/检出中对分支进行删除 如果涉及到私有仓库，需要在服务器上搭建远程仓库，这将在之后进行介绍]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[美化桌面图标]]></title>
     <url>%2F2019%2F04%2F30%2F%E7%BE%8E%E5%8C%96%E6%A1%8C%E9%9D%A2%E5%9B%BE%E6%A0%87%2F</url>
     <content type="text"><![CDATA[图标下载图标请到以下网址下载： https://una.im/gradient-folders/ 更换图标 以下设置是在 win10 系统下修改的。 新建文件夹，并重命名。 右键文件夹，进入属性选项。 选择 自定义-更改图标 。 选择图标就可以了，在步骤 2 中有展示。]]></content>
